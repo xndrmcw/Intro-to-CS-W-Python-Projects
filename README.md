@@ -1,2 +1,2 @@
 # MIT6.0001
- MIT's Intro to CS w Python Course. My problem sets, and notes.
+Intro to Comp Sci W Python! Nothing too crazy, just my problem sets and notes from MIT's OCW 6.0001 class.
