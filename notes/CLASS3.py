@@ -35,6 +35,7 @@ if abs(guess ** 3 - cube) >= epsilon:
 else:
     print(guess, "is close to the cube root of", cube)
 
+
 # Bisection search code
 cube = 10000
 epsilon = .01
@@ -51,3 +52,29 @@ while abs(guess**3 - cube) >= epsilon:
     num_guesses += 1
 print('num_guesses =', num_guesses)
 print(guess, 'is close to the cube root of', cube)
+
+def bisection(cube, epsilon):
+    """
+    Given a cube, an error term (epsilon) and a low value, this function will find the cube root of cube.
+    :param cube:
+    :param epsilon:
+    :return:
+    """
+    low = 0
+    high = cube
+    guess = (high + low) / 2.0
+    num_guesses = 0
+    while abs(guess ** 3 - cube) >= epsilon:
+        if guess ** 3 < cube:
+            low = guess
+        else:
+            high = guess
+        guess = (high + low) / 2.0
+        num_guesses += 1
+    print('num_guesses =', num_guesses)
+    print(guess, 'is close to the cube root of', cube)
+
+
+cube = int(input("Enter a number you'd like to find the cube root of: "))
+epsilon = float(input("Enter your margin of error: "))
+bisection(cube, epsilon)
